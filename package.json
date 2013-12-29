@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "scripts": {
+    "bower": "bower install",
+    "fix": "fixjsstyle --strict --nojsdoc ./lib/alternate-stylesheets.js",
+    "lint": "gjslint --strict --nojsdoc ./lib/alternate-stylesheets.js",
+    "mini": "uglifyjs ./lib/alternate-stylesheets.js --comments -cm -d 'Mocha=void 0' -r alternateStyleSheets -o ./alternate-stylesheets.min.js",
+    "postinstall": "npm run-script bower",
+    "test": "testem ci",
+    "testem": "testem",
+    "travis": "testem ci --launch Firefox,PhantomJS"
+  },
+  "devDependencies": {
+    "bower": "~1.2",
+    "testem": "~0.6",
+    "uglify-js": "~2.4"
+  }
+}
