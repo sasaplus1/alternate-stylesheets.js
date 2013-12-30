@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>switch of alternate stylesheet</title>
+<link rel="alternate stylesheet" title="red" href="./red.css">
+<link rel="alternate stylesheet" title="green" href="./green.css">
+<link rel="alternate stylesheet" title="blue" href="./blue.css">
+<style>
+  div {
+    height: 150px;
+    margin: 0 auto;
+    width: 150px;
+  }
+
+  div label {
+    text-shadow: 0 1px 0 #fff;
+  }
+</style>
+<div>
+  <label for="red">red</label><input name="stylesheets" id="red" type="radio">
+  <br>
+  <label for="green">green</label><input name="stylesheets" id="green" type="radio">
+  <br>
+  <label for="blue">blue</label><input name="stylesheets" id="blue" type="radio">
+</div>
+<script src="../../alternate-stylesheets.min.js"></script>
+<script>
+  window.onload = function() {
+    var inputs = document.getElementsByTagName('input'),
+        i, len;
+
+    for (i = 0, len = inputs.length; i < len; ++i) {
+      inputs[i].onclick = function() {
+        alternateStyleSheets.set(this.id);
+      };
+    }
+  };
+</script>
