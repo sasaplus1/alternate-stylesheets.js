@@ -1,4 +1,8 @@
 {
+  "name": "alternate-stylesheets",
+  "description": "switch alternate stylesheets",
+  "version": "0.1.0",
+  "author": "sasa+1 <sasaplus1@gmail.com>",
   "devDependencies": {
     "eslint": "^4.13.1",
     "fixpack": "^2.3.1"
@@ -13,9 +17,19 @@
     "extends": "eslint:recommended",
     "root": true
   },
-  "private": true,
+  "eslintIgnore": [
+    "dist"
+  ],
+  "license": "MIT",
+  "main": "./index.js",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sasaplus1/alternate-stylesheets.js.git"
+  },
   "scripts": {
     "fixpack": "fixpack",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "npm run eslint"
   }
 }
