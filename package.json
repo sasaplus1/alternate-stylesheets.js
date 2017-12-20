@@ -1,8 +1,7 @@
 {
   "devDependencies": {
     "eslint": "^4.13.1",
-    "fixpack": "^2.3.1",
-    "uglify-js": "~2.4"
+    "fixpack": "^2.3.1"
   },
   "eslintConfig": {
     "env": {
@@ -17,7 +16,6 @@
   "private": true,
   "scripts": {
     "fixpack": "fixpack",
-    "lint": "eslint .",
-    "mini": "uglifyjs ./lib/alternate-stylesheets.js --comments -cm -d 'Mocha=void 0' -r alternateStyleSheets -o ./alternate-stylesheets.min.js"
+    "lint": "eslint ."
   }
 }
