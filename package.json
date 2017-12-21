@@ -30,8 +30,13 @@
     "url": "https://github.com/sasaplus1/alternate-stylesheets.js.git"
   },
   "scripts": {
+    "build": "npm run compile && npm run minify",
+    "clean": "rm -f ./dist/alternate-stylesheets{,.min}.js",
+    "compile": "npm run webpack -- --output-filename alternate-stylesheets.js",
+    "minify": "npm run webpack -- -p --output-filename alternate-stylesheets.min.js",
     "fixpack": "fixpack",
     "lint": "eslint .",
-    "test": "npm run eslint"
+    "test": "npm run eslint",
+    "webpack": "webpack --colors --display-error-details --progress"
   }
 }
