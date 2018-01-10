@@ -20,7 +20,8 @@
     "root": true
   },
   "eslintIgnore": [
-    "dist"
+    "dist",
+    "docs"
   ],
   "license": "MIT",
   "main": "./index.js",
