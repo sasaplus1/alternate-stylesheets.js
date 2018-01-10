@@ -34,10 +34,10 @@
     "build": "npm run compile && npm run minify",
     "clean": "rm -f ./dist/alternate-stylesheets{,.min}.js",
     "compile": "npm run webpack -- --output-filename alternate-stylesheets.js",
-    "minify": "npm run webpack -- -p --output-filename alternate-stylesheets.min.js",
     "fixpack": "fixpack",
     "lint": "eslint .",
     "test": "npm run eslint",
+    "minify": "npm run webpack -- -p --output-filename alternate-stylesheets.min.js",
     "webpack": "webpack --colors --display-error-details --progress"
   }
 }
