@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+}
+
+.title {
+  font-family: HelveticaNeue-UltraLight, Helvetica, sans-serif;
+  font-weight: normal;
+  letter-spacing: 1px;
+  margin: 40px 0 0 0;
+  text-align: center;
+  text-shadow: 0 1px 0 #fff;
+  transition: color .2s ease 0s;
+}
+
+.list {
+  letter-spacing: 16px;
+  line-height: 1;
+  list-style-type: none;
+  margin: 24px 0 0 0;
+  padding: 0;
+  text-align: center;
+}
+
+.list .item {
+  display: inline;
+}
+
+.main {
+  margin: 0 auto;
+  width: 100vw;
+}
+
+.main .stylesheets {
+  display: block;
+  margin: 40px auto 0 auto;
+}
+
+.github-fork-ribbon::before {
+  background-color: #333;
+}
