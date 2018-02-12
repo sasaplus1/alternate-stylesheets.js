@@ -6,6 +6,8 @@
   "devDependencies": {
     "eslint": "^4.13.1",
     "fixpack": "^2.3.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.1.0",
     "npm-run-all": "^4.1.2",
     "serve": "^6.4.3",
     "webpack": "^3.10.0"
@@ -25,6 +27,9 @@
     "docs"
   ],
   "license": "MIT",
+  "lint-staged": {
+    "**/*.js": "npm run eslint --"
+  },
   "main": "./index.js",
   "readmeFilename": "README.md",
   "repository": {
@@ -35,9 +40,11 @@
     "build": "npm run compile && npm run minify",
     "clean": "rm -f ./dist/alternate-stylesheets{,.min}.js",
     "compile": "npm run webpack -- --output-filename alternate-stylesheets.js",
+    "eslint": "eslint",
     "fixpack": "fixpack",
-    "lint": "eslint .",
+    "lint": "npm run eslint -- .",
     "minify": "npm run webpack -- -p --output-filename alternate-stylesheets.min.js",
+    "precommit": "lint-staged",
     "serve": "serve ./docs",
     "test": "npm run lint",
     "travis": "npm test",
