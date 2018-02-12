@@ -6,7 +6,8 @@
   "devDependencies": {
     "eslint": "^4.13.1",
     "fixpack": "^2.3.1",
-    "testcafe": "^0.18.5",
+    "npm-run-all": "^4.1.2",
+    "serve": "^6.4.3",
     "webpack": "^3.10.0"
   },
   "eslintConfig": {
@@ -36,8 +37,10 @@
     "compile": "npm run webpack -- --output-filename alternate-stylesheets.js",
     "fixpack": "fixpack",
     "lint": "eslint .",
-    "test": "npm run eslint",
     "minify": "npm run webpack -- -p --output-filename alternate-stylesheets.min.js",
+    "serve": "serve ./docs",
+    "test": "npm run lint",
+    "travis": "npm test",
     "webpack": "webpack --colors --display-error-details --progress"
   }
 }
