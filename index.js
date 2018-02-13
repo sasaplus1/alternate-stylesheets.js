@@ -1,7 +1,5 @@
 'use strict';
 
-var isWebKit = (!document.all && navigator.taintEnabled === void 0);
-
 /**
  * get alternate stylesheet elements.
  *
@@ -36,13 +34,7 @@ function set(title) {
 
   for (i = 0, len = styleSheets.length; i < len; ++i) {
     styleSheet = styleSheets[i];
-
     styleSheet.disabled = (styleSheet.title !== title);
-
-    if (isWebKit) {
-      styleSheet.disabled = !styleSheet.disabled;
-      styleSheet.disabled = !styleSheet.disabled;
-    }
   }
 }
 
