@@ -24,9 +24,6 @@ addons:
   firefox:
     latest
 
-script:
-  - xvfb-run npm test
-
 notifications:
   email:
     false
