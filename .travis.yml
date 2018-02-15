@@ -18,6 +18,15 @@ cache:
   directories:
     - node_modules
 
+addons:
+  chrome:
+    stable
+  firefox:
+    latest
+
+script:
+  - xvfb-run npm test
+
 notifications:
   email:
     false
