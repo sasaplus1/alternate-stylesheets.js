@@ -51,6 +51,9 @@ function set(title) {
   for (i = 0; i < len; ++i) {
     styleSheet = styleSheets[i];
     styleSheet.disabled = (styleSheet.title !== title);
+    // HACK: for Google Chrome and Safari
+    styleSheet.disabled = !styleSheet.disabled;
+    styleSheet.disabled = !styleSheet.disabled;
   }
 
   return targetStyleSheet;
