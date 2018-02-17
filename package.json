@@ -32,6 +32,10 @@
     "dist",
     "docs"
   ],
+  "files": [
+    "dist",
+    "index.js"
+  ],
   "license": "MIT",
   "lint-staged": {
     "**/*.js": "npm run eslint --"
