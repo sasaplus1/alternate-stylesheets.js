@@ -4,7 +4,7 @@
 [![Dependency Status](https://gemnasium.com/sasaplus1/alternate-stylesheets.js.svg)](https://gemnasium.com/sasaplus1/alternate-stylesheets.js)
 [![Try alternate-stylesheets on RunKit](https://badge.runkitcdn.com/alternate-stylesheets.svg)](https://npm.runkit.com/alternate-stylesheets)
 
-get/set Alternate StyleSheets
+switch Alternate StyleSheets
 
 ## Installation
 
