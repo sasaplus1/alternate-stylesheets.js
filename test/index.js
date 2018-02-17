@@ -40,15 +40,23 @@ describe('alternate-stylesheets', function() {
   });
 
   describe('#set()', function() {
-    it('set alternate stylesheet', function() {
+    beforeEach(function() {
       alternateStylesheets.set('blue');
+    });
+
+    it('set alternate stylesheet', function() {
+      assert(alternateStylesheets.set('blue') !== null);
       assert(!alternateStylesheets.get()[0].disabled);
 
-      alternateStylesheets.set('pink');
+      assert(alternateStylesheets.set('pink') !== null);
       assert(!alternateStylesheets.get()[1].disabled);
 
-      alternateStylesheets.set('snow');
+      assert(alternateStylesheets.set('snow') !== null);
       assert(!alternateStylesheets.get()[2].disabled);
+    });
+
+    it('return null if passed unknown stylesheet\'s title', function() {
+      assert(alternateStylesheets.set('unknown') === null);
     });
   });
 

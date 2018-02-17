@@ -44,14 +44,19 @@ alternateStyleSheets.set('chocolate');
 ### get()
 
 - `return`
-  - `HTMLLinkElement[]` - `<Link />` elements of alternate stylesheet
+  - `HTMLLinkElement[]`
+    - `<Link />` elements of alternate stylesheet.
 
 get alternate stylesheet elements.
 
 ### set(title)
 
 - `title`
-  - `string` - alternate stylesheet title
+  - `string`
+    - alternate stylesheet title
+- `return`
+  - `null|HTMLLinkElement`
+    - return null if passed unknown title, otherwise `<Link />` element of title.
 
 set alternate stylesheet.
 
