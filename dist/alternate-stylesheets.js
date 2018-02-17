@@ -88,7 +88,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /**
  * get alternate stylesheet elements.
  *
- * @return {HTMLLinkElement[]} alternate stylesheets.
+ * @return {HTMLLinkElement[]}
  */
 function get() {
   var links = document.getElementsByTagName('link');
@@ -111,16 +111,37 @@ function get() {
  * enable alternate stylesheet by title.
  *
  * @param {string} title
+ * @return {null|HTMLLinkElement}
  */
 function set(title) {
   var styleSheets = get();
 
-  var i, len, styleSheet;
+  var targetStyleSheet = null;
+  var len = styleSheets.length;
 
-  for (i = 0, len = styleSheets.length; i < len; ++i) {
+  var i, styleSheet;
+
+  for (i = 0; i < len; ++i) {
+    styleSheet = styleSheets[i];
+
+    if (styleSheet.title === title) {
+      targetStyleSheet = styleSheet;
+    }
+  }
+
+  if (targetStyleSheet === null) {
+    return null;
+  }
+
+  for (i = 0; i < len; ++i) {
     styleSheet = styleSheets[i];
     styleSheet.disabled = (styleSheet.title !== title);
+    // HACK: for Google Chrome and Safari
+    styleSheet.disabled = !styleSheet.disabled;
+    styleSheet.disabled = !styleSheet.disabled;
   }
+
+  return targetStyleSheet;
 }
 
 module.exports = {

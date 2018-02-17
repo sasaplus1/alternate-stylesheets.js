@@ -1,3 +1,7 @@
+# 0.2.0 / 2018-02-17
+
+  - fix to cannot enable stylesheet
+
 # 0.1.1 / 2018-02-17
 
   - modernize
