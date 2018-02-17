@@ -55,6 +55,7 @@
     "karma": "karma start",
     "lint": "npm run eslint -- .",
     "minify": "npm run webpack -- -p --output-filename alternate-stylesheets.min.js",
+    "postminify": "cp ./dist/alternate-stylesheets.min.js ./docs",
     "precommit": "lint-staged",
     "serve": "serve ./docs",
     "test": "npm run lint && npm run karma -- --single-run",
