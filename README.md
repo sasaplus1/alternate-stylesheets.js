@@ -1,17 +1,24 @@
 # alternate-stylesheets.js
 
-[![Build Status](https://travis-ci.org/sasaplus1/alternate-stylesheets.js.png)](https://travis-ci.org/sasaplus1/alternate-stylesheets.js)
-[![Dependency Status](https://gemnasium.com/sasaplus1/alternate-stylesheets.js.png)](https://gemnasium.com/sasaplus1/alternate-stylesheets.js)
+[![Build Status](https://travis-ci.org/sasaplus1/alternate-stylesheets.js.svg)](https://travis-ci.org/sasaplus1/alternate-stylesheets.js)
+[![Dependency Status](https://gemnasium.com/sasaplus1/alternate-stylesheets.js.svg)](https://gemnasium.com/sasaplus1/alternate-stylesheets.js)
+[![Try alternate-stylesheets on RunKit](https://badge.runkitcdn.com/alternate-stylesheets.svg)](https://npm.runkit.com/alternate-stylesheets)
 
-library for Alternate StyleSheets
+get/set Alternate StyleSheets
 
 ## Installation
 
 ```sh
-$ bower install alternate-stylesheets
+$ npm install alternate-stylesheets
 ```
 
 ## Usage
+
+```js
+var alternateStylesheets = require('alternate-stylesheets');
+```
+
+or
 
 ```html
 <script src="alternate-stylesheets.min.js"></script>
@@ -36,18 +43,17 @@ alternateStyleSheets.set('chocolate');
 
 ### get()
 
-- `return` StyleSheetList|Element[] - alternate stylesheets
+- `return`
+  - `HTMLLinkElement[]` - `<Link />` elements of alternate stylesheet
 
-get alternate stylesheets.
-
-return link tags if document.styleSheets not found.
-return link tags if rendering engine is WebKit or Blink.
+get alternate stylesheet elements.
 
 ### set(title)
 
-- `title` String - alternate stylesheet title
+- `title`
+  - `string` - alternate stylesheet title
 
-set enabled with alternate stylesheet for title.
+set alternate stylesheet.
 
 ## Test
 
