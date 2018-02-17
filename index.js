@@ -3,7 +3,7 @@
 /**
  * get alternate stylesheet elements.
  *
- * @return {HTMLLinkElement[]} alternate stylesheets.
+ * @return {HTMLLinkElement[]}
  */
 function get() {
   var links = document.getElementsByTagName('link');
