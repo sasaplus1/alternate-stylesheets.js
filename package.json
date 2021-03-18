@@ -30,12 +30,15 @@
     "typescript": "^4.2.3",
     "webpack": "^3.11.0"
   },
+  "engines": {
+    "node": ">=14"
+  },
   "files": [
-    "dist",
-    "index.js"
+    "dist/**/*"
   ],
   "license": "MIT",
-  "main": "./index.js",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.mjs",
   "readmeFilename": "README.md",
   "repository": {
     "type": "git",
@@ -43,20 +46,21 @@
   },
   "scripts": {
     "build": "npm run compile && npm run minify",
-    "clean": "rm -f ./dist/alternate-stylesheets{,.min}.js",
+    "clean": "npx rimraf ./dist/*",
     "compile": "npm run webpack -- --output-filename alternate-stylesheets.js",
     "fix": "run-s fix:*",
     "fix:eslint": "eslint --ext .js,.ts --fix .",
     "fix:prettier": "prettier --write '**/*.+(js|ts)'",
     "fixpack": "npx fixpack",
-    "karma": "karma start",
     "lint": "run-s lint:*",
     "lint:eslint": "eslint --cache --ext .js,.ts .",
     "lint:prettier": "prettier --check '**/*.+(js|ts)'",
     "minify": "npm run webpack -- -p --output-filename alternate-stylesheets.min.js",
     "postminify": "cp ./dist/alternate-stylesheets.min.js ./docs",
     "serve": "serve ./docs",
-    "test": "npm run lint && npm run karma -- --single-run",
+    "test": "karma start --single-run",
     "webpack": "webpack --colors --display-error-details --progress"
-  }
+  },
+  "sideEffects": false,
+  "types": "./dist/cjs/index.d.ts"
 }
