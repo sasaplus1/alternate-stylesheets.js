@@ -1,11 +1,9 @@
 (function(){
   'use strict';
 
-  /*global alternateStylesheets*/
-
   var fragment = document.createDocumentFragment();
 
-  var stylesheets = alternateStylesheets.get();
+  var stylesheets = alternateStylesheets.getAlternateStylesheets();
   var i, len, element, stylesheet;
 
   for (i = 0, len = stylesheets.length; i < len; ++i) {
@@ -21,7 +19,7 @@
   var select = document.getElementById('js-select');
 
   function onChange(event) {
-    alternateStylesheets.set(event.target.value);
+    alternateStylesheets.setAlternateStylesheet(event.target.value);
   }
 
   select.appendChild(fragment);
