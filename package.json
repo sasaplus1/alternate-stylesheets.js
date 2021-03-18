@@ -36,9 +36,6 @@
     "index.js"
   ],
   "license": "MIT",
-  "lint-staged": {
-    "**/*.js": "npm run eslint --"
-  },
   "main": "./index.js",
   "readmeFilename": "README.md",
   "repository": {
