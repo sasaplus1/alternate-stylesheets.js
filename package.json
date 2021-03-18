@@ -50,7 +50,7 @@
     "clean": "rm -f ./dist/alternate-stylesheets{,.min}.js",
     "compile": "npm run webpack -- --output-filename alternate-stylesheets.js",
     "eslint": "eslint",
-    "fixpack": "fixpack",
+    "fixpack": "npx fixpack",
     "karma": "karma start",
     "lint": "npm run eslint -- .",
     "minify": "npm run webpack -- -p --output-filename alternate-stylesheets.min.js",
