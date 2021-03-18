@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "lib": [
+      "DOM"
+    ],
+    "module": "CommonJS",
+    "newLine": "lf",
+    "outDir": "dist/cjs",
+    "sourceMap": true,
+    "strict": true,
+    "target": "ESNext"
+  },
+  "files": [
+    "index.ts"
+  ]
+}
