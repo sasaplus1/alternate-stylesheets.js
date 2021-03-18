@@ -3,6 +3,7 @@
   "description": "switch alternate stylesheets",
   "version": "0.2.0",
   "author": "sasa+1 <sasaplus1@gmail.com>",
+  "browser": "./dist/umd/alternate-stylesheets.js",
   "devDependencies": {
     "@rollup/plugin-typescript": "^8.2.0",
     "@types/mocha": "^8.2.1",
@@ -45,9 +46,12 @@
     "url": "https://github.com/sasaplus1/alternate-stylesheets.js.git"
   },
   "scripts": {
-    "build": "npm run compile && npm run minify",
+    "build": "run-p -l build:*",
+    "build:cjs": "tsc",
+    "build:mjs": "rollup -c --environment build:esm",
+    "build:umd": "rollup -c --environment build:umd",
+    "check-types": "tsc --noEmit",
     "clean": "npx rimraf ./dist/*",
-    "compile": "npm run webpack -- --output-filename alternate-stylesheets.js",
     "fix": "run-s fix:*",
     "fix:eslint": "eslint --ext .js,.ts --fix .",
     "fix:prettier": "prettier --write '**/*.+(js|ts)'",
@@ -55,11 +59,9 @@
     "lint": "run-s lint:*",
     "lint:eslint": "eslint --cache --ext .js,.ts .",
     "lint:prettier": "prettier --check '**/*.+(js|ts)'",
-    "minify": "npm run webpack -- -p --output-filename alternate-stylesheets.min.js",
-    "postminify": "cp ./dist/alternate-stylesheets.min.js ./docs",
+    "postbuild:umd": "cp ./dist/umd/alternate-stylesheets.min.js ./docs",
     "serve": "serve ./docs",
-    "test": "karma start --single-run",
-    "webpack": "webpack --colors --display-error-details --progress"
+    "test": "karma start --single-run"
   },
   "sideEffects": false,
   "types": "./dist/cjs/index.d.ts"
