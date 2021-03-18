@@ -1,9 +1,6 @@
 module.exports = {
-  '*.+(js|ts)': [
-    'eslint --cache --ext .js,.ts',
-    'prettier --check',
-    'tsc --noEmit',
-  ],
+  '*.js': ['eslint --cache --ext .js', 'prettier --check'],
+  '*.ts': ['eslint --cache --ext .ts', 'prettier --check', 'tsc --noEmit'],
   'package.json': [
     'npx fixpack --dryRun',
     'prettier --check --parser json-stringify'
