@@ -43,6 +43,19 @@ module.exports = {
           tryExtensions: ['.ts', '.js', '.json', '.node']
         }
       }
+    },
+    {
+      extends: [
+        'eslint:recommended',
+        'plugin:node/recommended-module',
+        'prettier'
+      ],
+      files: ['rollup.config.js'],
+      settings: {
+        node: {
+          allowModules: ['rollup-plugin-terser', '@wessberg/rollup-plugin-ts']
+        }
+      }
     }
   ],
   parserOptions: {
