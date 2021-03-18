@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/sasaplus1/alternate-stylesheets.js.svg)](https://travis-ci.org/sasaplus1/alternate-stylesheets.js)
 [![Dependency Status](https://gemnasium.com/sasaplus1/alternate-stylesheets.js.svg)](https://gemnasium.com/sasaplus1/alternate-stylesheets.js)
+[![npm version](https://badge.fury.io/js/alternate-stylesheets.svg)](https://badge.fury.io/js/alternate-stylesheets)
 [![Try alternate-stylesheets on RunKit](https://badge.runkitcdn.com/alternate-stylesheets.svg)](https://npm.runkit.com/alternate-stylesheets)
 
 switch Alternate StyleSheets
