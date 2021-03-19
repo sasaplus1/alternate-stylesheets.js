@@ -1,7 +1,7 @@
 # alternate-stylesheets.js
 
-[![Build Status](https://travis-ci.org/sasaplus1/alternate-stylesheets.js.svg)](https://travis-ci.org/sasaplus1/alternate-stylesheets.js)
-[![Dependency Status](https://gemnasium.com/sasaplus1/alternate-stylesheets.js.svg)](https://gemnasium.com/sasaplus1/alternate-stylesheets.js)
+[![Actions Status: test](https://github.com/sasaplus1/alternate-stylesheets.js/workflows/test/badge.svg)](https://github.com/sasaplus1/alternate-stylesheets.js/actions?query=workflow%3A"test")
+[![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
 [![npm version](https://badge.fury.io/js/alternate-stylesheets.svg)](https://badge.fury.io/js/alternate-stylesheets)
 [![Try alternate-stylesheets on RunKit](https://badge.runkitcdn.com/alternate-stylesheets.svg)](https://npm.runkit.com/alternate-stylesheets)
 
