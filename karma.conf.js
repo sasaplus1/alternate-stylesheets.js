@@ -9,6 +9,12 @@ module.exports = function (config) {
   config.set({
     basePath: path.resolve(__dirname),
     browsers: ['ChromeHeadlessNoSandbox'],
+    client: {
+      mocha: {
+        reporter: 'html',
+        ui: 'bdd'
+      }
+    },
     customLaunchers: {
       // NOTE: https://docs.travis-ci.com/user/chrome#Sandboxing
       ChromeHeadlessNoSandbox: {

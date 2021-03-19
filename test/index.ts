@@ -1,6 +1,6 @@
 import assert = require('assert');
 
-import { getAlternateStylesheets, setAlternateStylesheet } from '../';
+import { getAlternateStylesheets, setAlternateStylesheet } from '../index';
 
 describe('alternate-stylesheets', function () {
   before(function () {
@@ -50,7 +50,7 @@ describe('alternate-stylesheets', function () {
       assert(!getAlternateStylesheets()[2].disabled);
     });
 
-    it("return null if passed unknown stylesheet's title", function () {
+    it("return false if passed unknown stylesheet's title", function () {
       assert(!setAlternateStylesheet('unknown'));
     });
   });
