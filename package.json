@@ -29,6 +29,7 @@
     "rollup": "^2.41.5",
     "rollup-plugin-terser": "^7.0.2",
     "serve": "^11.3.2",
+    "typedoc": "^0.20.32",
     "typescript": "^4.2.3"
   },
   "engines": {
@@ -47,6 +48,7 @@
   },
   "scripts": {
     "build": "run-p -l build:*",
+    "build-documents": "typedoc",
     "build:cjs": "tsc",
     "build:mjs": "rollup -c --environment build:esm",
     "build:umd": "rollup -c --environment build:umd",

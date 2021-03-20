@@ -1,0 +1,12 @@
+{
+  "disableOutputCheck": true,
+  "entryPoints": [
+    "./index.ts"
+  ],
+  "excludeExternals": true,
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "out": "docs/typedoc",
+  "readme": "none",
+  "theme": "minimal"
+}

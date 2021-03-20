@@ -1,3 +1,6 @@
+/**
+ * get alternate style sheet elements
+ */
 export function getAlternateStylesheets(): HTMLLinkElement[] {
   const links = document.getElementsByTagName('link');
   const alternateStylesheets: HTMLLinkElement[] = [];
@@ -13,6 +16,11 @@ export function getAlternateStylesheets(): HTMLLinkElement[] {
   return alternateStylesheets;
 }
 
+/**
+ * set alternate style sheet
+ *
+ * @param title
+ */
 export function setAlternateStylesheet(title: string): boolean {
   const links = getAlternateStylesheets();
   const len = links.length;
