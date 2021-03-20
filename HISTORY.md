@@ -1,3 +1,8 @@
+# 1.0.0 / 2021-03-20
+
+  - migrate to TypeScript
+  - modernize
+
 # 0.2.0 / 2018-02-17
 
   - fix to cannot enable stylesheet
