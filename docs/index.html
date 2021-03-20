@@ -1,35 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>alternate-stylesheets.js</title>
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" title="blue" href="blue.css">
-    <link rel="alternate stylesheet" title="pink" href="pink.css">
+    <link rel="stylesheet" title="light" href="light.css">
+    <link rel="alternate stylesheet" title="dark" href="dark.css">
+    <script defer src="alternate-stylesheets.min.js"></script>
+    <script defer src="index.js"></script>
   </head>
   <body>
     <header>
       <h1 id="js-title" class="title">alternate-stylesheets.js</h1>
-      <ul class="list">
-        <li class="item">
-          <a href="https://github.com/sasaplus1/alternate-stylesheets.js"><!--
-            --><img width="24" height="24" src="https://unpkg.com/simple-icons@latest/icons/github.svg"><!--
-          --></a>
-        </li>
-        <li class="item">
-          <a href="https://www.npmjs.com/package/alternate-stylesheets"><!--
-            --><img width="24" height="24" src="https://unpkg.com/simple-icons@latest/icons/npm.svg"><!--
-          --></a>
-        </li>
-      </ul>
+      <nav>
+        <ul class="list">
+          <li class="item">
+            <a href="https://github.com/sasaplus1/alternate-stylesheets.js">GitHub</a>
+          </li>
+          <li class="item">
+            <a href="https://www.npmjs.com/package/alternate-stylesheets">npm</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <section class="main">
-      <select class="stylesheets" id="js-select"></select>
+      <label>stylesheet: <select id="js-select"></select></label>
     </section>
-
-    <script src="alternate-stylesheets.min.js"></script>
-    <script src="index.js"></script>
   </body>
 </html>
